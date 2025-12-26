@@ -1,0 +1,33 @@
+﻿<Window x:Class="ekz.ImportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Импорт данных" Height="331" Width="400"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Импорт данных" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <Button Content="Импорт автомобилей из CSV" 
+                    Height="35" Margin="0,5" Click="BtnImportCars_Click"
+                    ToolTip="Импорт из файла машины.csv"/>
+
+            <Button Content="Импорт клиентов из CSV" 
+                    Height="35" Margin="0,5" Click="BtnImportClients_Click"
+                    ToolTip="Импорт из файла клиенты.csv"/>
+
+            <Button Content="Импорт из Excel" 
+                    Height="35" Margin="0,5" Click="BtnImportExcel_Click"
+                    ToolTip="Требуется установка EPPlus"/>
+
+            <Button Content="Расчет загрузки автомобилей" 
+                    Height="35" Margin="0,5" Click="BtnCalculateLoad_Click"/>
+
+            <TextBlock x:Name="tbStatus" Margin="0,10,0,0" 
+                       TextWrapping="Wrap" Foreground="Gray"/>
+
+            <Button Content="Закрыть" Height="37" Margin="0,10,0,0" 
+                    Click="BtnClose_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
